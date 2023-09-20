@@ -1,13 +1,20 @@
 #include"shell.h"
+/**
+ * _strtok - A function to tokenize a given string.
+ * @s: The input string to be tokenized.
+ * @d: A pointer.
+ * Return: A pointer to the next token found in the input string.
+ * If no more tokens are found, it returns NULL.
+ */
 
-char* custom_strtok(char s[], const char* d)
+char *_strtok(char s[], const char *d)
 {
-	static char* token;
-	static char* end;
-	const char* delimr;
-	char* begin;
+	static char *token;
+	static char *end;
+	const char *delimr;
+	char *begin;
 	int srch_delim = 0;
-	
+
 	if (s != NULL)
 	{
 		if (_strchr(d, *s) != NULL)
