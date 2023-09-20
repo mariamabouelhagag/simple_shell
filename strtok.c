@@ -3,16 +3,13 @@
  * _strtok - A function to tokenize a given string.
  * @s: The input string to be tokenized.
  * @d: A pointer.
- * Return: A pointer to the next token found in the input string.
- * If no more tokens are found, it returns NULL.
+ * Return: A pointer to the next token found in the input string or Null.
  */
 
 char *_strtok(char s[], const char *d)
 {
-	static char *token;
-	static char *end;
-	const char *delimr;
-	char *begin;
+	static char *token, *end;
+	const char *delimr, char *begin;
 	int srch_delim = 0;
 
 	if (s != NULL)
@@ -22,7 +19,6 @@ char *_strtok(char s[], const char *d)
 		token = s;
 		end = s + _strlen(s);
 	}
-
 	begin = token;
 	if (begin == end)
 		return (NULL);
@@ -47,6 +43,8 @@ char *_strtok(char s[], const char *d)
 			srch_delim = 1;
 	}
 	if (srch_delim == 0)
-			return (NULL);
+	{
+		return (NULL);
+	}
 	return (begin);
 }
