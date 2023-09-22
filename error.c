@@ -8,18 +8,18 @@ void printerror(void)
 {
 	if (errno == ENOENT)
 	{
-		perror("No such file or directory");
+		write(STDERR_FILENO, "No such file or directory\n", 26);
 	}
 	else if (errno == EINVAL)
 	{
-		perror("Invalid argument");
+		write(STDERR_FILENO, "Invalid argument\n", 17);
 	}
 	else if (errno == ENOMEM)
 	{
-		perror("Out of memory");
+		write(STDERR_FILENO, "Out of memory\n", 14);
 	}
 	else
 	{
-		perror("Unknown error");
+		write(STDERR_FILENO, "Unknown error\n", 14);
 	}
 }
