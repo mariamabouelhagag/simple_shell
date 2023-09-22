@@ -14,7 +14,9 @@ You can then enter commands and see the output.
 
 Authors Mariam Salama;
 
-Mohamed AmiSimple Shell Project This is a simple shell project created with C language.
+Mohamed Amin
+
+Simple Shell Project This is a simple shell project created with C language.
 
 Description This shell project is a basic implementation of a shell that can execute commands and display the output to the user.
 
